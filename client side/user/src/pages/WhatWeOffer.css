@@ -1,0 +1,101 @@
+.what-we-offer {
+  padding: 60px 40px;
+  background: #0f1c2e;
+  color: white;
+  text-align: center;
+}
+
+.what-we-offer h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #ff5c00;
+}
+
+.offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.offer-card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Overlay on image */
+.card-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+/* Left Orange Line on Hover */
+.offer-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background-color: #ff5c00;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.offer-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff5c00;
+}
+
+.card-overlay h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+/* Hidden Description initially */
+.card-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ccc;
+  margin-top: 10px;
+  text-align: left;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.offer-card:hover .card-description {
+  max-height: 100px; /* approx. 2 lines */
+  opacity: 1;
+}
