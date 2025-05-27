@@ -12,5 +12,6 @@ A full-stack web application built with **MongoDB**, **Express.js**, **React**, 
 - 🗃️ Centralized state management (optional: Redux, Context API)
 - ⚙️ Secure and optimized for production
 
-## 📁 Project Structure
+## 📁 Project Scope
+This project is a hackethon project specified to universty management system focusing on user registeration and event regesteration etc
 
